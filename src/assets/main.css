@@ -1,1 +1,14 @@
 @import './base.css';
+
+#app {
+  font-weight: normal;
+}
+
+body {
+  margin: 0px;
+}
+
+.router-link-unstyled {
+  text-decoration: none;
+  color: inherit;
+}
