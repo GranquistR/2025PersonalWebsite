@@ -16,61 +16,75 @@ const logoText = ref('Ryan Granquist')
 const originalLogoText = 'Ryan Granquist'
 const newLogoText = 'MY PORTFOLIO'
 
-function deleteText() {
-  const randomTime = Math.floor(Math.random() * 300)
-  setTimeout(() => {
-    logoText.value = logoText.value.substring(0, logoText.value.length - 1)
-    if (logoText.value.length > 0) {
-      deleteText()
-    }
-  }, randomTime)
+function deleteText(): Promise<void> {
+  return new Promise((resolve) => {
+    const randomTime = Math.floor(Math.random() * 300)
+    setTimeout(() => {
+      logoText.value = logoText.value.substring(0, logoText.value.length - 1)
+      if (logoText.value.length > 0) {
+        deleteText().then(resolve)
+      }
+    }, randomTime)
+  })
 }
 
-function addText(text: string) {
-  const randomTime = Math.floor(Math.random() * 300)
-  setTimeout(() => {
-    logoText.value += text[logoText.value.length]
-    if (logoText.value.length < text.length) {
-      addText(text)
-    }
-  }, randomTime)
+function addText(text: string): Promise<void> {
+  return new Promise((resolve) => {
+    const randomTime = Math.floor(Math.random() * 300)
+    setTimeout(() => {
+      logoText.value += text[logoText.value.length]
+      if (logoText.value.length < text.length) {
+        addText(text).then(resolve)
+      } else {
+        resolve()
+      }
+    }, randomTime)
+  })
 }
 
-const cycleSteps = [
+const cycleSteps: (() => Promise<any>)[] = [
   () => {
     isBlinking.value = true
+    return Promise.resolve()
   },
-  deleteText,
   () => {
-    addText(newLogoText)
+    deleteText()
+    return Promise.resolve()
+  },
+  () => {
+    return addText(newLogoText)
   },
   () => {
     isBlinking.value = false
+    return Promise.resolve()
   },
   () => {
     isBlinking.value = true
+    return Promise.resolve()
   },
   deleteText,
   () => {
-    addText(originalLogoText)
+    return addText(originalLogoText)
   },
   () => {
     isBlinking.value = false
+    return Promise.resolve()
   },
 ]
 
 function executeStep() {
   if (stepIndex.value < cycleSteps.length) {
-    cycleSteps[stepIndex.value]()
-    stepIndex.value++
-    if (stepIndex.value == 4) {
-      setTimeout(executeStep, 30000)
-    } else {
-      setTimeout(executeStep, 5000)
-    }
+    cycleSteps[stepIndex.value]().then(() => {
+      stepIndex.value++
+      if (stepIndex.value == 4) {
+        setTimeout(executeStep, 30000)
+      } else {
+        setTimeout(executeStep, 5000)
+      }
+    })
   } else {
     stepIndex.value = 0
-    setTimeout(executeStep, 30000)
+    setTimeout(executeStep, 5000)
   }
 }
 
