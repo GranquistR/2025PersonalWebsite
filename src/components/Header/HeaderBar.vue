@@ -59,7 +59,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import MainLogo from '../components/MainLogo.vue'
+import MainLogo from './MainLogo.vue'
 import { Button } from 'primevue'
 import { Drawer } from 'primevue'
 import { onScroll } from '@/utils/onScroll'

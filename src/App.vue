@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HeaderBar from './components/HeaderBar.vue'
+import HeaderBar from './components/Header/HeaderBar.vue'
 import RusselPopup from './components/RusselPopup.vue'
 </script>
 

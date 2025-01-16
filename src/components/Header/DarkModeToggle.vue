@@ -3,7 +3,7 @@
 </template>
 <script setup lang="ts">
 import Button from 'primevue/button'
-import { onMounted, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 
 const checked = ref(false)
 

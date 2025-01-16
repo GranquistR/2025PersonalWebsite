@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from 'primevue'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 const stepIndex = ref(0)
