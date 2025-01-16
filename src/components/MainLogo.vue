@@ -1,5 +1,5 @@
 <template>
-  <div class="logo-text flex flex-row items-center" @click="deleteText()">
+  <div class="logo-text flex flex-row items-center w-19rem" @click="deleteText()">
     < {{ logoText }}
     <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span>
     />
@@ -65,13 +65,13 @@ function executeStep() {
     cycleSteps[stepIndex.value]()
     stepIndex.value++
     if (stepIndex.value == 4) {
-      setTimeout(executeStep, 20000)
+      setTimeout(executeStep, 30000)
     } else {
       setTimeout(executeStep, 5000)
     }
   } else {
     stepIndex.value = 0
-    setTimeout(executeStep, 20000)
+    setTimeout(executeStep, 30000)
   }
 }
 
