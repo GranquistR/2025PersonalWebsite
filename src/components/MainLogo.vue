@@ -61,14 +61,22 @@ const cycleSteps = [
 ]
 
 function executeStep() {
-  cycleSteps[stepIndex.value]()
-  stepIndex.value = (stepIndex.value + 1) % cycleSteps.length
-  setTimeout(executeStep, 5000)
+  if (stepIndex.value < cycleSteps.length) {
+    cycleSteps[stepIndex.value]()
+    stepIndex.value++
+    if (stepIndex.value == 4) {
+      setTimeout(executeStep, 20000)
+    } else {
+      setTimeout(executeStep, 5000)
+    }
+  } else {
+    stepIndex.value = 0
+    setTimeout(executeStep, 20000)
+  }
 }
 
 onMounted(() => {
-  setTimeout(executeStep, 10000)
-  setInterval(executeStep, 50000)
+  setTimeout(executeStep, 20000)
 })
 </script>
 
