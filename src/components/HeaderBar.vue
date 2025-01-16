@@ -6,15 +6,15 @@
       borderBottom: atTop ? 'none' : 'solid 1px #3f3f46',
     }"
   >
-    <div>
+    <div class="header-offset">
       <MainLogo />
     </div>
     <div class="gap-3 hidden lg:flex xl:flex">
       <Button v-for="link in links" :label="link.label" severity="secondary" variant="text" />
     </div>
-    <div class="flex gap-3">
+    <div class="flex gap-3 header-offset">
       <Button icon="pi pi-search" severity="secondary" variant="outlined" rounded />
-      <Drawer v-model:visible="menuVisible" position="right" class="w-full lg:w-min xl:w-min">
+      <Drawer v-model:visible="menuVisible" position="right" class="w-full lg:w-30rem xl:w-30rem">
         <template #header>
           <div class="w-full flex justify-content-center flex-wrap">
             <MainLogo />
@@ -56,5 +56,9 @@ onScroll(() => {
 <style scoped>
 .spacer {
   height: 4rem;
+}
+
+.header-offset {
+  width: 20rem;
 }
 </style>
