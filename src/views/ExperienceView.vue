@@ -49,7 +49,6 @@ const experiences = [
       'Converted legacy VBHTML web pages to Vue 3, improving front-end scalability and user experience.',
       'Independently migrated and deployed three critical batch applications from .NET Framework to .NET Core, optimizing system efficiency and reliability while keeping functionality.',
     ],
-    color: 'blue',
     icon: 'pi pi-briefcase',
   },
   {
@@ -62,7 +61,6 @@ const experiences = [
       'Provided assistance in person at the physical help desk, over the phone, and through on-site visits to offices, maintaining a high standard of customer service.',
       'Diagnosed and resolved diverse technical issues, contributing to improved IT efficiency and user satisfaction.',
     ],
-    color: 'green',
     icon: 'pi pi-desktop',
   },
   {
@@ -75,7 +73,6 @@ const experiences = [
       'Provided first aid and CPR as needed, demonstrating quick thinking and effective communication skills in high-pressure situations.',
       'Collaborated with team members to ensure the pool area was clean and organized, contributing to a positive experience for all patrons.',
     ],
-    color: 'red',
     icon: 'pi pi-plus',
   },
 ]
