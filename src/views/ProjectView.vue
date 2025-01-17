@@ -78,4 +78,8 @@ const projects = [
 .descriptions {
   max-width: 50rem;
 }
+img {
+  border: solid 1px #3f3f46;
+  border-radius: 10px;
+}
 </style>
