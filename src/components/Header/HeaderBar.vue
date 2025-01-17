@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-content-around align-items-center align-content-center pt-2 pb-1 fixed w-full"
+    class="flex justify-content-around align-items-center align-content-center pt-2 pb-1 fixed w-full z-1"
     :style="{
       backdropFilter: atTop ? 'none' : 'blur(8px)',
       borderBottom: atTop ? 'none' : 'solid 1px #3f3f46',
@@ -63,19 +63,13 @@ import MainLogo from './MainLogo.vue'
 import { Button } from 'primevue'
 import { Drawer } from 'primevue'
 import { onScroll } from '@/utils/onScroll'
+import { getLinks } from '@/utils/getLinks'
 import DarkModeToggle from './DarkModeToggle.vue'
 
 const menuVisible = ref(false)
 const atTop = ref(true)
 
-const links = ref([
-  { label: 'Home', url: '/', icon: 'pi pi-home' },
-  { label: 'About Me', url: '/about', icon: 'pi pi-user' },
-  { label: 'Projects', url: '/projects', icon: 'pi pi-folder' },
-  { label: 'Work Experience', url: '/work-experience', icon: 'pi pi-briefcase' },
-  { label: 'Tools', url: '/tools', icon: 'pi pi-cog' },
-  { label: 'Contact', url: '/contact', icon: 'pi pi-envelope' },
-])
+const links = getLinks()
 
 onScroll(() => {
   atTop.value = window.scrollY == 0
