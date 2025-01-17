@@ -12,7 +12,12 @@
       <h1 class="text-5xl font-bold my-0">Ryan Granquist</h1>
       <h3 class="mt-2 text-xl">Software Developer</h3>
       <div class="flex gap-3 mt-3">
-        <Button label="Resume" icon="pi pi-download" outlined severity="contrast" rounded />
+        <a
+          href="/src/assets/files/Ryan-Granquist-Software-Developer-Resume.pdf"
+          download="Ryan_Granquist_Resume.pdf"
+        >
+          <Button label="Resume" icon="pi pi-download" outlined severity="contrast" rounded />
+        </a>
         <Button label="Contact" icon="pi pi-envelope" severity="contrast" rounded />
       </div>
     </div>
