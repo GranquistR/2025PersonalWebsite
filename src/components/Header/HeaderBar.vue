@@ -16,7 +16,7 @@
     </div>
     <div class="flex gap-3 header-offset">
       <!-- <Button icon="pi pi-search" severity="contrast" variant="outlined" rounded /> -->
-      <DarkModeToggle class="hidden lg:block xl:block" />
+      <DarkModeToggle class="hidden lg:flex xl:flex" />
       <Drawer v-model:visible="menuVisible" position="right" class="w-full lg:w-30rem xl:w-30rem">
         <!-- <template #header>
 
