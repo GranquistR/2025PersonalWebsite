@@ -4,14 +4,9 @@
     <div class="text-xl py-4">
       Site Links
       <div class="links w-min">
-        <Button
-          class="w-10rem"
-          text
-          severity="secondary"
-          v-for="link in links"
-          :key="link.label"
-          :label="link.label"
-        />
+        <RouterLink :to="link.url" v-for="link in links" :key="link.label">
+          <Button class="w-10rem" text severity="secondary" :label="link.label" />
+        </RouterLink>
       </div>
     </div>
     <div class="text-xl py-4">
@@ -58,6 +53,7 @@
 import Divider from 'primevue/divider'
 import { Button } from 'primevue'
 import { getLinks } from '@/utils/getLinks'
+import { RouterLink } from 'vue-router'
 
 const links = getLinks()
 </script>

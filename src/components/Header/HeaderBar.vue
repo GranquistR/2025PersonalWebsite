@@ -10,14 +10,9 @@
       <MainLogo />
     </div>
     <div class="gap-3 hidden lg:flex xl:flex">
-      <Button
-        v-for="link in links"
-        :key="link.label"
-        :label="link.label"
-        severity="secondary"
-        variant="text"
-        :icon="link.icon"
-      />
+      <RouterLink :to="link.url" v-for="link in links" :key="link.label">
+        <Button :label="link.label" severity="secondary" variant="text" :icon="link.icon" />
+      </RouterLink>
     </div>
     <div class="flex gap-3 header-offset">
       <!-- <Button icon="pi pi-search" severity="contrast" variant="outlined" rounded /> -->
@@ -43,14 +38,20 @@
           </div>
 
           <div class="flex flex-column gap-3 m-3 justify-content-start">
-            <Button
+            <RouterLink
+              :to="link.url"
               v-for="link in links"
               :key="link.label"
-              :label="link.label"
-              severity="secondary"
-              outlined
-              :icon="link.icon"
-            />
+              @click="closeCallback"
+            >
+              <Button
+                :label="link.label"
+                severity="secondary"
+                outlined
+                :icon="link.icon"
+                class="w-full"
+              />
+            </RouterLink>
           </div>
         </template>
       </Drawer>
