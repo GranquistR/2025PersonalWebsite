@@ -1,4 +1,6 @@
 <template>
+  <h1 class="text-5xl font-bold my-0 ml-8">Projects</h1>
+
   <div v-for="(project, index) in projects" :key="project.title">
     <div
       :class="{
