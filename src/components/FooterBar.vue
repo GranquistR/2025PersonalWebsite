@@ -1,7 +1,7 @@
 <template>
   <Divider />
-  <div class="flex flex-wrap justify-content-evenly p-8 mb-6">
-    <div class="text-xl">
+  <div class="flex flex-wrap justify-content-evenly p-4 mb-6">
+    <div class="text-xl py-4">
       Site Links
       <div class="links w-min">
         <Button
@@ -14,7 +14,7 @@
         />
       </div>
     </div>
-    <div class="text-xl">
+    <div class="text-xl py-4">
       Made with
       <div class="flex flex-wrap mt-3 gap-5">
         <img
@@ -39,7 +39,7 @@
         />
       </div>
     </div>
-    <div class="text-xl">Connect
+    <div class="text-xl py-4">Connect
 
 <div class="flex flex-column m-3">
     <Button
