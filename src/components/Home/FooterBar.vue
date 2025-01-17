@@ -39,24 +39,17 @@
         />
       </div>
     </div>
-    <div class="text-xl py-4">Connect
+    <div class="text-xl py-4">
+      Connect
 
-<div class="flex flex-column m-3">
-    <Button
-        icon="pi pi-github"
-        text
-        severity="secondary"
-        label="GitHub"
-    </Button>
-    <Button
-        icon="pi pi-linkedin"
-        text
-        severity="secondary"
-        label="LinkedIn"
-    </Button>
-
-</div>
-
+      <div class="flex flex-column m-3">
+        <a href="https://github.com/GranquistR" target="_blank">
+          <Button icon="pi pi-github" text severity="secondary" label="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/ryangranquist/" target="_blank">
+          <Button icon="pi pi-linkedin" text severity="secondary" label="LinkedIn" />
+        </a>
+      </div>
     </div>
   </div>
 </template>

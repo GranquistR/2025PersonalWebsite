@@ -12,6 +12,7 @@
     <div class="gap-3 hidden lg:flex xl:flex">
       <Button
         v-for="link in links"
+        :key="link.label"
         :label="link.label"
         severity="secondary"
         variant="text"
@@ -23,7 +24,7 @@
       <DarkModeToggle class="hidden lg:block xl:block" />
       <Drawer v-model:visible="menuVisible" position="right" class="w-full lg:w-30rem xl:w-30rem">
         <!-- <template #header>
-          
+
         </template>
         <div class="flex flex-column gap-3">
           <Button v-for="link in links" :label="link.label" severity="secondary" />
@@ -44,6 +45,7 @@
           <div class="flex flex-column gap-3 m-3 justify-content-start">
             <Button
               v-for="link in links"
+              :key="link.label"
               :label="link.label"
               severity="secondary"
               outlined

@@ -1,13 +1,13 @@
 <template>
   <div class="logo-text flex flex-row items-center w-19rem" @click="deleteText()">
-    < {{ logoText }}
+    &lt; {{ logoText }}
     <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span>
-    />
+    /&gt;
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const stepIndex = ref(0)
 const isBlinking = ref(false)
@@ -42,7 +42,7 @@ function addText(text: string): Promise<void> {
   })
 }
 
-const cycleSteps: (() => Promise<any>)[] = [
+const cycleSteps: (() => Promise<void>)[] = [
   () => {
     isBlinking.value = true
     return Promise.resolve()
