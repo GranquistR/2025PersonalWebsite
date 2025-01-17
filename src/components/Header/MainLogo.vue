@@ -62,7 +62,10 @@ const cycleSteps: (() => Promise<any>)[] = [
     isBlinking.value = true
     return Promise.resolve()
   },
-  deleteText,
+  () => {
+    deleteText()
+    return Promise.resolve()
+  },
   () => {
     return addText(originalLogoText)
   },
