@@ -32,6 +32,6 @@ import { Button } from 'primevue'
 }
 
 .welcome-box {
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 </style>

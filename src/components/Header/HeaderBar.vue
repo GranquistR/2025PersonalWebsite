@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-content-around align-items-center align-content-center pt-2 pb-1 fixed w-full z-1"
+    class="flex justify-content-around align-items-center align-content-center fixed w-full z-1"
     :style="{
       backdropFilter: atTop ? 'none' : 'blur(8px)',
       borderBottom: atTop ? 'none' : 'solid 1px #3f3f46',
