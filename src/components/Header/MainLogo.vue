@@ -1,13 +1,16 @@
 <template>
-  <div class="logo-text flex flex-row items-center w-19rem" @click="deleteText()">
-    &lt; {{ logoText }}
-    <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span>
-    /&gt;
-  </div>
+  <RouterLink to="/" class="unstyled-link">
+    <div class="logo-text flex flex-row items-center w-19rem">
+      &lt; {{ logoText }}
+      <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span>
+      /&gt;
+    </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const stepIndex = ref(0)
 const isBlinking = ref(false)
@@ -120,6 +123,11 @@ onMounted(() => {
   position: relative;
   margin-right: 6px;
   animation: blink 1s infinite;
+}
+
+.unstyled-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 @keyframes blink {

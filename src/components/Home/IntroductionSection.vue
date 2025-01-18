@@ -18,7 +18,9 @@
         >
           <Button label="Resume" icon="pi pi-download" outlined severity="contrast" rounded />
         </a>
-        <Button label="Contact" icon="pi pi-envelope" severity="contrast" rounded />
+        <RouterLink to="/contact">
+          <Button label="Contact" icon="pi pi-envelope" severity="contrast" rounded />
+        </RouterLink>
       </div>
     </div>
   </div>

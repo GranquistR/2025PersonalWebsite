@@ -5,6 +5,7 @@ import ProjectView from '@/views/ProjectView.vue'
 import ExperienceView from '@/views/ExperienceView.vue'
 import ExtrasView from '@/views/ExtrasView.vue'
 import PianoKeyPractive from '@/views/PianoKeyPractive.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/extras/piano-key-practice',
       name: 'piano-key-practice',
       component: PianoKeyPractive,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactView,
     },
     {
       path: '/:pathMatch(.*)*', // Catch-all route
