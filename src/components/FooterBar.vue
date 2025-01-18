@@ -1,6 +1,6 @@
 <template>
   <Divider />
-  <div class="flex flex-wrap justify-content-evenly p-4 mb-6">
+  <div class="flex flex-wrap justify-content-evenly p-4 mb-4">
     <div class="text-xl py-4">
       Site Links
       <div class="links w-min">

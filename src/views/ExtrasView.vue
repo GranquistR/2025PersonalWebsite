@@ -18,13 +18,6 @@ import Button from 'primevue/button'
 import { RouterLink } from 'vue-router'
 const panels = [
   {
-    title: 'Youtube Downloader',
-    content: 'Download a youtube video in mp4 format',
-    icon: 'pi pi-youtube',
-    color: 'CornflowerBlue',
-    url: '/youtube-downloader',
-  },
-  {
     title: 'Piano Key Practice',
     content: 'Gives a random note and hand to play on the piano',
     icon: 'pi pi-headphones',
