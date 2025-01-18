@@ -6,25 +6,14 @@
       full-stack web and batch development.
     </p>
 
-    <div class="flex flex-wrap justify-content-center align-items-center gap-3">
-      <Panel class="w-full max-w-25rem h-13rem" v-for="(panel, index) in panels" :key="index">
-        <template #header>
-          <div class="flex flex-column gap-3">
-            <i :class="panel.icon + ' text-2xl'" :style="{ color: panel.color }"></i>
-            <div class="font-semibold text-lg">
-              {{ panel.title }}
-            </div>
-          </div>
-        </template>
-        {{ panel.content }}
-      </Panel>
+    <div class="flex align-items-stretch flex-wrap justify-content-center gap-3">
+      <InfoPanel v-for="panel in panels" :key="panel.title" :panelDetails="panel" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Panel } from 'primevue'
-
+import InfoPanel from '@/components/InfoPanel.vue'
 const panels = [
   {
     title: '6 Professional Projects',

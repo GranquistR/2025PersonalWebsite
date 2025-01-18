@@ -87,7 +87,7 @@ function executeStep() {
     })
   } else {
     stepIndex.value = 0
-    setTimeout(executeStep, 5000)
+    setTimeout(executeStep, 10000)
   }
 }
 

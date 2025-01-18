@@ -6,9 +6,24 @@ import FooterBar from '@/components/FooterBar.vue'
 </script>
 
 <template>
-  <HeaderBar />
-  <RouterView />
-  <FooterBar />
-
-  <RusselPopup />
+  <div id="app">
+    <HeaderBar />
+    <div class="content">
+      <RouterView />
+    </div>
+    <FooterBar />
+    <RusselPopup />
+  </div>
 </template>
+
+<style scoped>
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+</style>
