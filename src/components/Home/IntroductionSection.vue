@@ -13,7 +13,7 @@
       <h3 class="mt-2 text-xl">Software Developer</h3>
       <div class="flex gap-3 mt-3">
         <a
-          href="/src/assets/files/Ryan-Granquist-Software-Developer-Resume.pdf"
+          href="/files/Ryan-Granquist-Software-Developer-Resume.pdf"
           download="Ryan_Granquist_Resume.pdf"
         >
           <Button label="Resume" icon="pi pi-download" outlined severity="contrast" rounded />
