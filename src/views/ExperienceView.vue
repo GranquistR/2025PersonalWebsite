@@ -41,7 +41,7 @@ const experiences = [
   {
     title: 'Associate Software Developer',
     company: 'Sentry Insurance',
-    date: 'June 2023 - Dec 2023',
+    date: 'June 2023 - Dec 2024',
     location: 'Stevens Point, WI',
     descriptions: [
       'Performed full-stack development for web and batch applications, ensuring high-quality software solutions.',
