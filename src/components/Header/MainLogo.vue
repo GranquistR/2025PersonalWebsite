@@ -1,102 +1,121 @@
 <template>
   <RouterLink to="/" class="unstyled-link">
     <div class="logo-text flex flex-row items-center w-19rem">
-      &lt; {{ logoText }}
-      <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span>
+      &lt; Ryan Granquist
+      <!-- <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span> -->
       /&gt;
     </div>
   </RouterLink>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+//import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const stepIndex = ref(0)
-const isBlinking = ref(false)
-const logoText = ref('Ryan Granquist')
+// const stepIndex = ref(0)
+// const isBlinking = ref(false)
+// const logoText = ref('Ryan Granquist')
 
-const originalLogoText = 'Ryan Granquist'
-const newLogoText = 'MY PORTFOLIO'
+// const originalLogoText = 'Ryan Granquist'
+// const newLogoText = 'MY PORTFOLIO'
+// const animationDelay = 100 // Delay in milliseconds
 
-function deleteText(): Promise<void> {
-  return new Promise((resolve) => {
-    const randomTime = Math.floor(Math.random() * 300)
-    setTimeout(() => {
-      logoText.value = logoText.value.substring(0, logoText.value.length - 1)
-      if (logoText.value.length > 0) {
-        deleteText().then(resolve)
-      }
-    }, randomTime)
-  })
-}
+// function deleteText(): Promise<void> {
+//   console.debug('Deleting text: ', logoText.value)
+//   return new Promise((resolve) => {
+//     let lastTime = performance.now()
+//     function step(currentTime: number) {
+//       if (currentTime - lastTime >= animationDelay) {
+//         logoText.value = logoText.value.substring(0, logoText.value.length - 1)
+//         lastTime = currentTime
+//       }
+//       if (logoText.value.length > 0) {
+//         requestAnimationFrame(step)
+//       } else {
+//         resolve()
+//       }
+//     }
+//     requestAnimationFrame(step)
+//   })
+// }
 
-function addText(text: string): Promise<void> {
-  return new Promise((resolve) => {
-    const randomTime = Math.floor(Math.random() * 300)
-    setTimeout(() => {
-      logoText.value += text[logoText.value.length]
-      if (logoText.value.length < text.length) {
-        addText(text).then(resolve)
-      } else {
-        resolve()
-      }
-    }, randomTime)
-  })
-}
+// function addText(text: string): Promise<void> {
+//   console.debug('Adding text: ', logoText.value)
+//   return new Promise((resolve) => {
+//     let lastTime = performance.now()
+//     function step(currentTime: number) {
+//       if (currentTime - lastTime >= animationDelay) {
+//         logoText.value += text[logoText.value.length]
+//         lastTime = currentTime
+//       }
+//       if (logoText.value.length < text.length) {
+//         requestAnimationFrame(step)
+//       } else {
+//         resolve()
+//       }
+//     }
+//     requestAnimationFrame(step)
+//   })
+// }
 
-const cycleSteps: (() => Promise<void>)[] = [
-  () => {
-    isBlinking.value = true
-    return Promise.resolve()
-  },
-  () => {
-    deleteText()
-    return Promise.resolve()
-  },
-  () => {
-    return addText(newLogoText)
-  },
-  () => {
-    isBlinking.value = false
-    return Promise.resolve()
-  },
-  () => {
-    isBlinking.value = true
-    return Promise.resolve()
-  },
-  () => {
-    deleteText()
-    return Promise.resolve()
-  },
-  () => {
-    return addText(originalLogoText)
-  },
-  () => {
-    isBlinking.value = false
-    return Promise.resolve()
-  },
-]
+// const cycleSteps: (() => Promise<void>)[] = [
+//   () => {
+//     isBlinking.value = true
+//     return Promise.resolve()
+//   },
+//   () => {
+//     deleteText()
+//     return Promise.resolve()
+//   },
+//   () => {
+//     addText(newLogoText)
+//     return Promise.resolve()
+//   },
+//   () => {
+//     isBlinking.value = false
+//     return Promise.resolve()
+//   },
+//   () => {
+//     isBlinking.value = true
+//     return Promise.resolve()
+//   },
+//   () => {
+//     deleteText()
+//     return Promise.resolve()
+//   },
+//   () => {
+//     addText(originalLogoText)
+//     return Promise.resolve()
+//   },
+//   () => {
+//     isBlinking.value = false
+//     return Promise.resolve()
+//   },
+// ]
 
-function executeStep() {
-  if (stepIndex.value < cycleSteps.length) {
-    cycleSteps[stepIndex.value]().then(() => {
-      stepIndex.value++
-      if (stepIndex.value == 4) {
-        setTimeout(executeStep, 30000)
-      } else {
-        setTimeout(executeStep, 5000)
-      }
-    })
-  } else {
-    stepIndex.value = 0
-    setTimeout(executeStep, 10000)
-  }
-}
+// function executeStep() {
+//   if (stepIndex.value < cycleSteps.length) {
+//     cycleSteps[stepIndex.value]().then(() => {
+//       stepIndex.value++
+//       if (stepIndex.value == 4) {
+//         setTimeout(executeStep, 30000)
+//         console.debug('Waiting for 30 seconds step: ', stepIndex.value)
+//       } else {
+//         setTimeout(executeStep, 5000)
+//         console.debug('Waiting for 5 seconds step: ', stepIndex.value)
+//       }
+//     })
+//   } else {
+//     stepIndex.value = 0
+//     setTimeout(executeStep, 10000)
+//     console.debug('Waiting for 10 seconds step: ', stepIndex.value)
+//   }
+// }
 
-onMounted(() => {
-  setTimeout(executeStep, 20000)
-})
+// onMounted(() => {
+//   setTimeout(executeStep, 20000)
+//   console.debug('Waiting for 20 seconds step: ', stepIndex.value)
+// })
 </script>
 
 <style scoped>
