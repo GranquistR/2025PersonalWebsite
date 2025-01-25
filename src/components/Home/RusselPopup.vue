@@ -1,5 +1,8 @@
 <template>
-  <div class="image flex" :style="{ bottom: atBottom ? (imageHover ? '-30%' : '-60%') : '-120%' }">
+  <div
+    class="image hidden lg:flex xl:flex"
+    :style="{ bottom: atBottom ? (imageHover ? '-30%' : '-60%') : '-120%' }"
+  >
     <img
       src="/images/RusselPopup.png"
       alt="Russel, my beloved..."

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-5xl font-bold my-0 ml-8">Work Experience</h1>
+  <h1 class="text-5xl font-bold my-0 ml-8">Experience</h1>
   <div class="realign-center">
     <Timeline :value="experiences">
       <template #marker="slotProps">
@@ -78,15 +78,7 @@ const experiences = [
 ]
 </script>
 
-<style scoped>
-.center-card {
-  transform: translateY(-45%);
-}
-
-.realign-center {
-  margin-top: 9rem;
-}
-</style>
+<style scoped></style>
 
 <style>
 .p-timeline-event-opposite {

@@ -1,6 +1,6 @@
 <template>
   <Divider />
-  <div class="flex flex-wrap justify-content-evenly p-4 mb-4">
+  <div class="flex flex-column lg:flex-row xl:flex-row flex-wrap justify-content-evenly p-4 mb-4">
     <div class="text-xl py-4">
       Site Links
       <div class="links w-min">
@@ -15,22 +15,22 @@
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
           alt="Vue.js"
-          class="h-5rem"
+          class="h-3rem"
         />
         <img
           src="https://i2.wp.com/www.primefaces.org/wp-content/uploads/2019/12/primevue-logo.png?fit=300%2C300&ssl=1"
           alt="PrimeVue"
-          class="h-5rem"
+          class="h-3rem"
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
           alt="Typescript"
-          class="h-5rem"
+          class="h-3rem"
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/800px-Visual_Studio_Code_1.35_icon.svg.png"
           alt="Visual Studio Code"
-          class="h-5rem"
+          class="h-3rem"
         />
       </div>
     </div>
