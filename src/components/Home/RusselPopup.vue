@@ -1,7 +1,7 @@
 <template>
   <div class="image flex" :style="{ bottom: atBottom ? (imageHover ? '-30%' : '-60%') : '-90%' }">
     <img
-      src="/src/assets/images/RusselPopup.png"
+      src="/public/images/RusselPopup.png"
       alt="Russel, my beloved..."
       @mouseover="imageHover = true"
       @mouseleave="imageHover = false"

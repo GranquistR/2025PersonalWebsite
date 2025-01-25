@@ -52,7 +52,7 @@ const projects = [
        create this project over the course of the semester. Easily the project I am most proud of.`,
     ],
     date: 'Sep 2024 - Dec 2024',
-    image: '/src/assets/images/PixelPainter.png',
+    image: '/public/images/PixelPainter.png',
     url: 'https://github.com/GranquistR/Pixel-Painter',
   },
   {
@@ -70,7 +70,7 @@ const projects = [
       project to success.`,
     ],
     date: 'Jan 2024 - May 2024',
-    image: '/src/assets/images/SpaceBox.png',
+    image: '/public/images/SpaceBox.png',
     url: 'https://github.com/GranquistR/SolarSystemManager',
   },
 ]

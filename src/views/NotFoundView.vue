@@ -1,6 +1,6 @@
 <template>
   <div class="not-found flex flex-row justify-content-center align-items-center gap-6">
-    <img src="/src/assets/images/mr-bean-lost.gif" alt="404" class="w-3 hidden lg:block xl:block" />
+    <img src="/public/images/mr-bean-lost.gif" alt="404" class="w-3 hidden lg:block xl:block" />
     <div class="flex max-w-20rem flex-column justify-content-start">
       <h1 class="text-6xl">OOPS! PAGE <br />NOT FOUND</h1>
       <p class="text-xl">
