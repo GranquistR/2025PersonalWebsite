@@ -2,7 +2,7 @@
   <div class="flex flex-row justify-content-center align-items-stretch flex-wrap gap-3 mt-4">
     <InfoPanel
       :panel-details="{
-        title: 'Send me and email',
+        title: 'Send me an email',
         content: 'Takes you to your email client to send me an email',
         icon: 'pi pi-envelope',
         color: 'MediumSeaGreen',
