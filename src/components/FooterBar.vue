@@ -5,7 +5,7 @@
       Site Links
       <div class="links w-min">
         <RouterLink :to="link.url" v-for="link in links" :key="link.label">
-          <Button class="w-10rem" text severity="secondary" :label="link.label" />
+          <Button class="" text severity="secondary" :label="link.label" />
         </RouterLink>
       </div>
     </div>
