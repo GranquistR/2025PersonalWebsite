@@ -5,7 +5,7 @@
     <img
       src="/images/SelfPortrait.jpg"
       alt="Me at a wedding in Arizona"
-      class="image lg:mr-8 xl:mr-8 mb-5 lg:mb-0 xl:mb-0"
+      class="image h-17rem w-17rem lg:h-25rem lg:w-25rem xl:h-25rem lxl:w-25rem lg:mr-8 xl:mr-8 mb-5 lg:mb-0 xl:mb-0"
     />
     <div class="flex flex-column justify-content-center align-items-center lg:ml-8 xl:ml-8">
       <p class="m-0 text-xl">Hello, I'm,</p>
@@ -32,8 +32,6 @@ import { Button } from 'primevue'
 <style scoped>
 .image {
   border-radius: 50%;
-  height: 25rem;
-  width: 25rem;
   /* prevent image stretch */
   object-fit: cover;
 }
