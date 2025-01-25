@@ -25,7 +25,7 @@
           <Button v-for="link in links" :label="link.label" severity="secondary" />
         </div> -->
         <template #container="{ closeCallback }">
-          <div class="w-full flex justify-content-center align-items-center flex-wrap mt-3 gap-3">
+          <div class="w-full flex justify-content-center align-items-center mt-3 gap-4">
             <MainLogo text="Portfolio" />
             <DarkModeToggle />
             <Button
@@ -43,6 +43,7 @@
               v-for="link in links"
               :key="link.label"
               @click="closeCallback"
+              class=""
             >
               <Button
                 :label="link.label"

@@ -1,6 +1,6 @@
 <template>
   <RouterLink to="/" class="unstyled-link">
-    <div class="logo-text flex flex-row items-center w-19rem">
+    <div class="logo-text flex flex-row items-center">
       &lt; {{ text }}
       <!-- <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span> -->
       /&gt;
