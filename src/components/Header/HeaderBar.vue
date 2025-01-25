@@ -7,7 +7,7 @@
     }"
   >
     <div class="header-offset">
-      <MainLogo />
+      <MainLogo text="Ryan Granquist" />
     </div>
     <div class="gap-3 hidden lg:flex xl:flex">
       <RouterLink :to="link.url" v-for="link in links" :key="link.label">
@@ -26,7 +26,7 @@
         </div> -->
         <template #container="{ closeCallback }">
           <div class="w-full flex justify-content-center align-items-center flex-wrap mt-3 gap-3">
-            <MainLogo />
+            <MainLogo text="Portfolio" />
             <DarkModeToggle />
             <Button
               icon="pi pi-times"

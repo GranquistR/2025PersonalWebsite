@@ -1,7 +1,7 @@
 <template>
   <RouterLink to="/" class="unstyled-link">
     <div class="logo-text flex flex-row items-center w-19rem">
-      &lt; Ryan Granquist
+      &lt; {{ text }}
       <!-- <span :class="{ 'blinking-cursor': isBlinking, hidden: !isBlinking }"></span> -->
       /&gt;
     </div>
@@ -11,6 +11,10 @@
 <script setup lang="ts">
 //import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
+
+defineProps<{
+  text: string
+}>()
 
 // const stepIndex = ref(0)
 // const isBlinking = ref(false)
